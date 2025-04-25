@@ -5,7 +5,7 @@ import { Interval } from '@nestjs/schedule';
 export class AppService {
   @Interval(1000)
   async handleInterval() {
-    const res = await fetch('springboot/hello/world');
+    const res = await fetch('http://springboot/hello/world');
     const data = await res.json();
 
     console.log(data);
