@@ -6,7 +6,7 @@ export class AppService {
   @Interval(1000)
   async handleInterval() {
     const res = await fetch('http://springboot:8080/hello/world');
-    const data = await res.json();
+    const data = await res.text();
 
     console.log(data);
   }
